@@ -10,13 +10,20 @@
 
   &__photo {
     display: flex;
-    margin-top: 30px;
-    margin-bottom: 45px;
+    margin: 20px 14px 35px;
+    height: 209px;
     justify-content: center;
+    box-sizing: border-box;
 
     &-img {
       width: 160px;
       height: 134px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      border: 1px solid #f3f3f3;
+
+      transition: transform 1s;
     }
   }
 
@@ -82,24 +89,29 @@
     margin-top: 21px;
     margin-bottom: 15px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+
+    color: $fon;
     font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
-    justify-content: center;
-    align-items: center;
-    color: $fon;
+
     cursor: pointer;
     background: $main-color;
     border: 1px solid $main-color;
     border-radius: 5px;
-    transition: all 0.5s;
+
+    transition: background-color 0.5s;
 
     &:hover {
       position: relative;
       top: 1px;
-      background-color: $fon;
+
       color: $main-color;
+
+      background-color: $fon;
     }
   }
 
@@ -107,21 +119,34 @@
     display: flex;
     height: 19px;
     margin-top: 20px;
+
     align-items: flex-end;
 
     &-info {
-      font-size: 11px;
       flex-basis: 50%;
+      font-size: 11px;
     }
   }
 
   &__pricing-info {
-    flex-basis: 50%;
     display: flex;
-    margin-bottom: -1px;
     flex-direction: row-reverse;
+    flex-basis: 50%;
+    margin-bottom: -1px;
+
     font-size: 16px;
     font-weight: 700;
     text-align: right;
+  }
+}
+
+.card:hover {
+  .card__photo {
+    position: relative;
+    bottom: 5px;
+    .card__photo-img {
+      transform: scale(1.2);
+      border: 3px solid #f3f3f3;
+    }
   }
 }
