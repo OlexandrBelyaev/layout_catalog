@@ -15,7 +15,6 @@
     justify-content: center;
     box-sizing: border-box;
 
-    transition: margin 1s;
     &-img {
       width: 160px;
       height: 134px;
@@ -24,7 +23,7 @@
 
       border: 1px solid #f3f3f3;
 
-      transition: width 1s, height 1s;
+      transition: transform 1s;
     }
   }
 
@@ -143,10 +142,10 @@
 
 .card:hover {
   .card__photo {
-    margin: -1px 0 27px;
+    position: relative;
+    bottom: 5px;
     .card__photo-img {
-      width: calc(160px * 1.2);
-      height: calc(134px * 1.2);
+      transform: scale(1.2);
       border: 3px solid #f3f3f3;
     }
   }
